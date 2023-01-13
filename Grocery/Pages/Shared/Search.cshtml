@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="topnav">
+    <div class="search-container">
+        <form method="get" asp-page="/Products">
+            <input type="text" placeholder="Search products.." name="productSearch">
+            <button type="submit">Search</button>
+            <select name="limit" id="limit">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+            </select>
+        </form>
+    </div>
+</div> 

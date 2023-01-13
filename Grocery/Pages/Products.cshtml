@@ -1,0 +1,36 @@
+﻿@page
+@model Grocery.Pages.ProductsModel
+@using Grocery.Models
+@{
+    ViewData["Title"] = "Products";
+}
+
+<partial name="~/Pages/Shared/Search.cshtml" />
+
+
+    <table style="width:100%">
+        <tr>
+            <th>Image</th>
+            <th>ID</th>
+            <th>Brand</th>
+            <th>Description</th>
+            <th>Regular Price</th>
+            <th>Promo Price</th>
+            <th>Size</th>
+            <th>Price/Unit</th>
+        </tr>
+        @foreach (Product product in Model.Products)
+        {
+            <tr>
+                <td style="border: 1px solid black;"><img src=@product.ImageURL  style="height: ;"></td>
+                <td style="border: 1px solid black;">@product.Id</td>
+                <td style="border: 1px solid black;">@product.Brand</td>
+                <td style="border: 1px solid black;">@product.Description</td>
+                <td style="border: 1px solid black;">@product.PriceRegularString</td>
+                <td style="border: 1px solid black;">@product.PricePromoString</td>
+                <td style="border: 1px solid black;">@product.Size</td>
+                <td style="border: 1px solid black;">@product.PricePerUnitString</td>
+            </tr>
+        }
+    </table>
+</div> 
